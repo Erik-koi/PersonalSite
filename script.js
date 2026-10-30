@@ -2,7 +2,7 @@ const visitCounter = document.querySelector('#visit-count');
 const COUNTER_API_URL = 'https://erik-portfolio-counter.erik-koi.workers.dev/api/visits';
 
 async function updateVisitCounter() {
-  if (!visitCounter || COUNTER_API_URL.includes('YOUR-SUBDOMAIN')) return;
+  if (!visitCounter) return;
 
   try {
     const response = await fetch(COUNTER_API_URL, { cache: 'no-store' });
