@@ -1,0 +1,14 @@
+name = "erik-portfolio-counter"
+main = "counter-worker.js"
+compatibility_date = "2026-10-30"
+
+[vars]
+SITE_ORIGIN = "https://erik-koi.github.io"
+
+[[durable_objects.bindings]]
+name = "VISITOR_COUNTER"
+class_name = "VisitorCounter"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VisitorCounter"]
