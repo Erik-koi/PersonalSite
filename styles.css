@@ -540,6 +540,7 @@ h2 {
 
 @keyframes equalize { to { transform: scaleY(.4); } }
 
+/* Quick facts (резюме) */
 .resume-facts {
   align-items: stretch;
   justify-content: center;
