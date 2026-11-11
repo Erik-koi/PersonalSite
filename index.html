@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#15121f">
-  <meta name="description" content="Erik's software developer portfolio and résumé - mobile software studies, programming projects, skills, and experience.">
+  <meta name="description" content="Erik's software developer portfolio and resume - mobile software studies, programming projects, skills, and experience.">
   <title>Erik - Software Developer</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -21,7 +21,7 @@
         <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#projects">PROJECTS</a><a href="#contact">CONTACT</a>
       </nav>
       <div class="hero-copy">
-        <p class="eyebrow"><span class="online-dot"></span> SOFTWARE DEVELOPER PORTFOLIO & RÉSUMÉ</p>
+        <p class="eyebrow"><span class="online-dot"></span> <span class="eyebrow-text" aria-label="SOFTWARE DEVELOPER PORTFOLIO & RÉSUMÉ">SOFTWARE DEVELOPER PORTFOLIO & RÉSUMÉ</span></p>
         <h1>Hi, I'm<br><span>Erik.</span></h1>
         <p class="hero-subtitle">I'm a software developer interested in smartphone applications, practical tools, and well-designed digital experiences. I'm growing my skills through software studies and hands-on projects.</p>
         <a class="sticker-link" href="#projects">VIEW MY PROJECTS <span aria-hidden="true">↓</span></a>
@@ -65,14 +65,14 @@
           <div class="career-column">
             <p class="career-column-label"><span aria-hidden="true">✷</span> WORK EXPERIENCE</p>
             <article class="career-card career-vaisala">
-              <span class="career-scribble" aria-hidden="true">⚡</span>
+              <span class="career-scribble" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7l1-7Z"/></svg></span>
               <span class="career-date">2024 - PRESENT</span>
               <h3>Electrical Mechanic</h3>
               <p class="career-place">Vaisala Oyj <span>•</span> Helsinki, Finland</p>
               <p class="career-description">Electrical mechanic experience at Vaisala, alongside ongoing software development studies and personal projects.</p>
             </article>
             <article class="career-card career-omnia">
-              <span class="career-scribble" aria-hidden="true">⌁</span>
+              <span class="career-scribble" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17h5a4 4 0 0 0 4-4v-2a4 4 0 0 1 4-4h3m-4-3 4 3-4 3"/></svg></span>
               <span class="career-date">EXPERIENCE</span>
               <h3>Electronics</h3>
               <p class="career-place">Omnia</p>
@@ -105,27 +105,55 @@
 
       <section class="projects-section" id="projects">
         <div class="section-title-row"><div><p class="mini-label">SELECTED WORK FROM GITHUB</p><h2>Featured projects</h2></div><a class="all-projects-link" href="https://github.com/Erik-koi?tab=repositories" target="_blank" rel="noopener noreferrer">ALL 28 REPOSITORIES ↗</a></div>
+        <div class="project-tools">
+          <div class="project-filters" role="group" aria-label="Filter projects">
+            <button class="project-filter is-active" type="button" data-project-filter="all" aria-pressed="true">ALL</button>
+            <button class="project-filter" type="button" data-project-filter="full-stack" aria-pressed="false">FULL-STACK</button>
+            <button class="project-filter" type="button" data-project-filter="front-end" aria-pressed="false">FRONT-END</button>
+            <button class="project-filter" type="button" data-project-filter="multi-page" aria-pressed="false">MULTI-PAGE</button>
+            <button class="project-filter" type="button" data-project-filter="more" aria-pressed="false">MORE PROJECTS</button>
+          </div>
+          <p class="project-results" id="project-results" aria-live="polite" aria-atomic="true">Showing 6 projects.</p>
+        </div>
         <div class="projects-grid">
-          <article class="project-card project-featured">
+          <article class="project-card project-featured" data-project-category="full-stack">
             <div class="project-card-top"><span class="project-number">01</span><span class="project-type">FULL-STACK WEB APP</span></div>
             <h3>LaRestaurant</h3>
             <p>A restaurant finder and booking app with a multi-page interface and an Express API. Includes restaurant and daily-menu data, user accounts, favorites, table reservations, and admin routes.</p>
             <div class="project-tags"><span>JavaScript</span><span>Node.js</span><span>Express</span><span>HTML / CSS</span></div>
             <a class="project-link" href="https://github.com/Erik-koi/Restaurant_project" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-project-category="front-end">
             <div class="project-card-top"><span class="project-number">02</span><span class="project-type">FRONT-END PRACTICE</span></div>
             <h3>Restaurant UI & JavaScript</h3>
             <p>A restaurant website project alongside practical exercises in DOM manipulation, events, arrays, functions, and AJAX.</p>
             <div class="project-tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>AJAX</span></div>
             <a class="project-link" href="https://github.com/Erik-koi/restaurant_page" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-project-category="multi-page">
             <div class="project-card-top"><span class="project-number">03</span><span class="project-type">MULTI-PAGE WEBSITE</span></div>
             <h3>Home Company</h3>
             <p>A real-estate website concept with home, products, and contact pages, responsive layouts, and property imagery.</p>
             <div class="project-tags"><span>HTML</span><span>CSS</span><span>Responsive design</span></div>
             <a class="project-link" href="https://github.com/Erik-koi/web" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+          </article>
+          <article class="project-card" data-project-category="more">
+            <div class="project-card-top"><span class="project-number">04</span><span class="project-type">GAME • AZUMI4HAN</span></div>
+            <h3>Tori Adventure</h3>
+            <p>A game with custom DOM components and a Python backend.</p>
+            <a class="project-link" href="https://github.com/Azumi4han/Tori-adventure" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+          </article>
+          <article class="project-card" data-project-category="more">
+            <div class="project-card-top"><span class="project-number">05</span><span class="project-type">GITHUB REPOSITORY</span></div>
+            <h3>Lentopeli</h3>
+            <p>Explore the project on GitHub.</p>
+            <a class="project-link" href="https://github.com/Azumi4han/lentopeli" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+          </article>
+          <article class="project-card" data-project-category="more">
+            <div class="project-card-top"><span class="project-number">06</span><span class="project-type">GITHUB REPOSITORY • NIKOSILAN</span></div>
+            <h3>Restaurant Project</h3>
+            <p>Explore the project on GitHub.</p>
+            <a class="project-link" href="https://github.com/nikosilan/restaurant_project" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
           </article>
         </div>
       </section>
